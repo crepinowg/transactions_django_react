@@ -1,0 +1,84 @@
+LANGUEAGES UTILISE : NEXTJS
+BASE DE DONNEES : MONGODB
+
+⸻
+
+Solimi Wallet – Backend + Frontend
+
+Application web de gestion de transactions et clients avec FastAPI pour le backend et Next.js pour le frontend.
+
+⸻
+
+Prérequis
+	•	Python >= 3.13
+	•	npm ou yarn
+
+⸻
+
+Backend (FastAPI)
+
+1. Créer un environnement virtuel
+
+cd backend
+python -m venv env
+source env/bin/activate    # macOS/Linux
+env\Scripts\activate       # Windows
+
+2. Installer les dépendances
+
+pip install -r requirements.txt
+
+3. Configurer les variables (optionnel)
+
+Le fichier app/core/config.py contient par défaut :
+
+MONGO_URI = "mongodb+srv://<USER>:<PASSWORD>@cluster0.newlv.mongodb.net/?appName=Cluster0"
+MONGO_DB = "solimi_wallet"
+JWT_SECRET = "123456789"
+jwt_algorithm = "HS256"
+jwt_expire_minutes = 60
+
+4. Lancer le serveur FastAPI
+
+uvicorn app.main:app --reload
+
+Le backend sera accessible à : http://localhost:8000
+
+5. Tester les endpoints
+	•	Docs ReDoc : http://localhost:8000/redoc
+⸻
+
+Frontend (Next.js)
+
+1. Installer les dépendances
+
+cd frontend
+npm install
+# ou
+yarn install
+
+3. Lancer le frontend
+
+npm run dev
+# ou
+yarn dev
+
+L’application sera accessible à : http://localhost:3000
+
+
+Commandes utiles
+	•	Lancer backend :
+
+uvicorn app.main:app --reload
+
+	•	Lancer frontend :
+
+npm run dev
+
+	•	Installer dépendances backend :
+
+pip install -r requirements.txt
+
+	•	Installer dépendances frontend :
+
+npm install
